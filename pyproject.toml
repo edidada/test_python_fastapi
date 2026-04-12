@@ -1,0 +1,33 @@
+[project]
+name = "blog-fastapi"
+version = "0.1.0"
+description = "FastAPI blog application with SQLAlchemy"
+authors = [
+    {name = "Your Name", email = "your@email.com"}
+]
+requires-python = "^3.10"
+dependencies = [
+    "fastapi>=0.109.0",
+    "uvicorn[standard]>=0.27.0",
+    "sqlalchemy>=2.0.0",
+    "pydantic>=2.0.0",
+    "pydantic-settings>=2.0.0",
+    "python-multipart>=0.0.6",
+    "pymysql>=1.1.0",
+    "cryptography>=40.0.0",
+    "python-jose[cryptography]>=3.3.0",
+    "passlib[bcrypt]>=1.7.4",
+    "python-dotenv>=1.0.0",
+    "itsdangerous>=2.0.0",
+]
+
+[tool.poetry]
+packages = [{include = "src"}]
+
+[tool.poetry.scripts]
+start = "src.main:main"
+dev = "uvicorn src.main:app --reload --host 0.0.0.0 --port 8000"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0"]
+build-backend = "poetry.core.masonry.api"
