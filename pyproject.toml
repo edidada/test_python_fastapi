@@ -1,5 +1,5 @@
 [project]
-name = "blog-fastapi"
+name = "test_python_fastapi"
 version = "0.1.0"
 description = "FastAPI blog application with SQLAlchemy"
 authors = [
